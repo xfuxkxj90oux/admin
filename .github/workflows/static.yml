@@ -31,6 +31,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - name: Add files with curl
+        run: |
+          curl -o 2193436312.xml "http://174.112.242.33:1200/weibo/user/2193436312/readable=1?image_hotlink_template=https://i3.wp.com/${host}${pathname}"
+          curl -o 2193436312.xml "http://174.112.242.33:1200/weibo/user/6123122439/readable=1?image_hotlink_template=https://i3.wp.com/${host}${pathname}"
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
