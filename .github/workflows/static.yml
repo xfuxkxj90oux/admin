@@ -7,7 +7,7 @@ on:
     branches: ["main"]
 
   schedule:
-    - cron: '39 */4 * * *'
+    - cron: '39 */3 * * *'
     
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -36,7 +36,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Add files with curl
         run: |
-          curl -O http://78.141.206.40:8888/rsshub.tar.xz && tar -xJf rsshub.tar.xz && rm rsshub.tar.xz
+          curl -O http://155.138.131.36:8888/rsshub.tar.xz && tar -xJf rsshub.tar.xz && rm rsshub.tar.xz
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
