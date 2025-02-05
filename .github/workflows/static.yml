@@ -36,7 +36,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Add files with curl
         run: |
-          curl -O http://155.138.131.36:8888/rsshub.tar.xz && tar -xJf rsshub.tar.xz && rm rsshub.tar.xz
+          curl -O http://155.138.131.36:8888/rsshub.tar.xz && tar -xJf rsshub.tar.xz && rm rsshub.tar.xz && ls -l
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
