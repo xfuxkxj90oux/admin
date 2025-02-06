@@ -32,13 +32,9 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
       - name: Add files with curl
         run: |
           curl -O http://155.138.131.36:8888/rsshub.tar.xz && tar -xJf rsshub.tar.xz && rm rsshub.tar.xz
-      - name: Setup Pages
-        uses: actions/configure-pages@v3
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
