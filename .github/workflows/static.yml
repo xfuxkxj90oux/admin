@@ -34,7 +34,7 @@ jobs:
     steps:
       - name: Add files with curl
         run: |
-          curl -O http://155.138.131.36:8888/rsshub.tar.gz && tar -xzf rsshub.tar.gz && rm rsshub.tar.gz
+          curl -O https://emuman.ooguy.com/rsshub.tar.gz && tar -xzf rsshub.tar.gz && rm rsshub.tar.gz
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
